@@ -4,6 +4,7 @@ import Home from "./pages/Home";
 import Services from "./components/ServiceCard";
 import Advice from "./components/FreeAdvice";
 import Complain from "./components/ComplaintForm";
+import Footer from "./components/Footer"; // ✅ Footer Import Kiya
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <Route path="/advice" element={<Advice />} />
         <Route path="/complain" element={<Complain />} />
       </Routes>
+      <Footer /> {/* ✅ Footer har page ke neeche show hoga */}
     </Router>
   );
 }
