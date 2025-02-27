@@ -34,6 +34,21 @@
   .swiper-slide {
     display: flex;
     justify-content: center;
+    gap: 20px; /* Added spacing between cards */
+  }
+  
+  /* Hide navigation arrows on smaller screens */
+  @media (max-width: 768px) {
+    .swiper-button-prev,
+    .swiper-button-next {
+      display: none !important;
+    }
+  }
+  
+  /* Center pagination dots */
+  .swiper-pagination {
+    position: relative;
+    margin-top: 20px;
   }
   
   /* Service Card */
@@ -48,10 +63,24 @@
     width: 100%;
     position: relative;
     overflow: hidden;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.5s ease-in-out forwards;
+  }
+  
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
   }
   
   .service-card:hover {
-    transform: translateY(-8px);
+    transform: scale(1.05);
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
   }
   
@@ -105,7 +134,7 @@
     }
   
     .service-card {
-      max-width: 300px;
+      max-width: 280px;
       padding: 20px;
     }
   
@@ -120,7 +149,7 @@
     }
   
     .service-card {
-      max-width: 270px;
+      max-width: 250px;
       padding: 18px;
     }
   
@@ -128,4 +157,3 @@
       font-size: 40px;
     }
   }
-  
