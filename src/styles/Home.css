@@ -6,6 +6,7 @@
     padding: 80px 8%;
     background: #f5f5f5;
     min-height: 80vh;
+    flex-wrap: wrap;
 }
 
 /* Left Side - Text */
@@ -46,6 +47,46 @@
     filter: drop-shadow(0px 10px 20px rgba(0, 0, 0, 0.2));
 }
 
+/* Service Areas Section */
+.service-areas {
+    text-align: center;
+    padding: 60px 8%;
+    background: #ffffff;
+    margin-top: 50px; /* Ensures section appears below */
+}
+
+.service-areas h2 {
+    font-size: 28px;
+    color: #222;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.area-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    max-width: 900px;
+    margin: auto;
+}
+
+.area {
+    padding: 12px 20px;
+    border: 2px solid dodgerblue;
+    border-radius: 8px;
+    color: #222;
+    font-size: 18px;
+    font-weight: bold;
+    background: #f5f5f5;
+    transition: all 0.3s ease-in-out;
+}
+
+.area:hover {
+    background: dodgerblue;
+    color: white;
+}
+
 /* Responsive Design */
 @media (max-width: 900px) {
     .home {
@@ -67,38 +108,18 @@
     .home-image img {
         width: 50%;
     }
-}
 
-/* Animations */
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(-15px);
+    .service-areas {
+        padding: 40px 5%;
     }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
 
-@keyframes slideIn {
-    from {
-        opacity: 0;
-        transform: translateX(-15px);
+    .area-list {
+        flex-direction: column;
+        align-items: center;
     }
-    to {
-        opacity: 1;
-        transform: translateX(0);
-    }
-}
 
-@keyframes slideUp {
-    from {
-        opacity: 0;
-        transform: translateY(15px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
+    .area {
+        width: 80%;
+        text-align: center;
     }
 }
